@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Navigator</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <!-- <script src='main.js'></script> -->
+    </head>
+    <body>
+        <nav id="menu">
+            <ul>
+                <li>
+                    <a href="#" rel="Home">Home</a>
+                </li>
+                
+                <li>
+                    <a href="" rel="Sobre">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="" rel="Contato">Contato</a>
+                </li>
+        </nav>
+        <div id="contador">
+            <div>
+                <h2>Contador safado</h2>
+                <span class="counter">0</span>
+            </div>
+            <button id="increase">Incrementar</button>
+            <button id="reset">Resetar</button>
+            <button id="decrease">Decrementar</button>
+        </div>
+        <!-- <div id="reviews">
+
+        </div> -->
+    </body>
+    <script>
+        const inc = document.getElementById("increase");
+        const res = document.getElementById("reset");
+        const dec = document.getElementById("decrease");
+        const cont = document.querySelector(".counter");
+        let number = 0;
+
+        inc.addEventListener('click', function(){
+            number += 1;
+            cont.textContent = number;
+            if(number > 0){
+                cont.style.color = "green";
+            }
+        })
+
+        res.addEventListener('click', function(){
+            number = 0;
+            cont.textContent = number;
+        })
+
+        dec.addEventListener('click', function(){
+            number -= 1;
+            cont.textContent = number;
+            if(number < 0){
+                cont.style.color = "red";
+            }
+        })
+    </script>
+</html>
