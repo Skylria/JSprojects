@@ -10,7 +10,7 @@ body {
     color: black;
     font-family: 'Montserrat', sans-serif;
     margin: auto;
-    background-color: aliceblue;
+    background-image: repeating-linear-gradient(90deg, #b1dafd6e 0px, #b1dafd6e 5px, #b1dafd6e 5px, rgba(120, 168, 168, 0.432) 5px, rgba(120, 168, 168, 0.432) 10px);
 }
 
 nav{
@@ -31,6 +31,15 @@ li:hover{
     animation-fill-mode: forwards;  
 }
 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
 a{
     color: white;
     text-decoration: none;
@@ -44,19 +53,36 @@ a:hover{
     text-align: center;
 }
 
-div h2{
+h1{
+    font-size: 120px;
+}
+
+h2{
     font-size: 100px;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.20em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    display: inline-flex;
 }
 
-.counter{
+h3{
     font-size: 80px;
-    font-weight: bolder;
 }
 
+h4{
+    font-size: 50px;
+    margin: 20px 0;
+    
+}
+
+h5{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h6{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 button{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -76,12 +102,63 @@ button{
 #increase {
     border-radius: 10px 0px 10px 0px;
 }
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 1;
-     }
+
+.container{
+    display: flex;
+    align-items: center;
+    height: 700px;
+}
+.counter{
+    font-size: 80px;
+    font-weight: bolder;
+}
+
+.review{
+    margin: auto;
+}
+
+.line{
+    color: rgb(0, 0, 0);
+}
+
+.box{
+    background-color:aliceblue;
+    margin: 5px auto;
+    width: 520px;
+    padding: 30px;
+    border:thin;
+    border-color:black;
+    border-radius: 10px;
+}
+
+.picture{
+    width: 120px;
+    height: 120px;
+    border: black double;
+    border-radius: 50%;
+}
+
+
+.name{
+    margin-top: 5px;
+}
+.role{
+    margin-top: 0;
+    font-weight: bolder;
+    color: rgb(29, 158, 158);
+}
+.text{
+    font-weight: bold;
+}
+
+.arrow{
+    color: rgb(21, 142, 241);
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.btn{
+    border-radius: 20px;
+    background-color: rgb(150, 224, 200);
 }
 
